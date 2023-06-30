@@ -1,49 +1,48 @@
-# Detección de deserción de clientes en el sector bancario utilizando aprendizaje supervisado
+# Customer Churn Detection in the Banking Sector Using Supervised Learning
 
-## Objetivo General del Proyecto 😃
-Evaluar el desempeño del método de sobremuestreo SMOTE, el método de submuestreo RUS y los métodos de sobremuestreo seguido de submuestreo SMOTE+ENN y SMOTE+TOMEK, utilizando los algoritmos de clasificación XGBoost, LogisticRegression, SVM, Random Forest, Naive Bayes, Decision Tree y KNN en 7 datasets desbalanceados obtenidos de los países de España, Francia y Alemania en términos precisión, sensibilidad, exactitud, valor-F1 y área bajo la curva ROC.
+## General Project Objective 😃
+Evaluate the performance of the SMOTE oversampling method, RUS undersampling method, and the combination of oversampling and undersampling methods (SMOTE+ENN and SMOTE+TOMEK) using the XGBoost, LogisticRegression, SVM, Random Forest, Naive Bayes, Decision Tree, and KNN classification algorithms on 7 imbalanced datasets obtained from Spain, France, and Germany in terms of precision, recall, accuracy, F1-score, and area under the ROC curve.
 
-## Objetivos Específicos del Proyecto 🧐
-- OE1: Analizar las fortalezas y limitaciones de los algoritmos de clasificación como RandomForest, SVM, XGboost, LogisticRegression, Naive Bayes, Decision Tree y KNN; y métodos de desbalanceo como SMOTE, RUS, SMOTE+ENN y SMOTE+TOMEK utilizados en estudios anteriores.
-- OE2: Diseñar un metodo de comparacion para identificar los mejores modelos con respecto a los algoritmos Random Forest, XGBoost, LogisticRegression, SVM, Naive Bayes, Decision Tree y KNN explorando los parámetros de los métodos de balanceo SMOTE, RUS, SMOTE+ENN y SMOTE+TOMEK y explorar la fusión de los datasets España, Francia y Alemania en variantes.
-- OE3: Evaluar los métodos de remuestreo SMOTE, RUS, SMOTE+ENN, SMOTE+TOMEK para determinar la técnica más adecuada en base a las métricas Precision (precisión), Recall (sensibilidad), Accuracy (exactitud), F-measure (medida F1) y AUC(Área bajo la curva)
-- OE4: Evaluar los diversos modelos obtenidos a partir de los algoritmos de clasificación Random Forest, XGBoost, LogisticRegression, SVM, Naive Bayes, Decision Tree y KNN para identificar el mejor modelo en base a las métricas Precision (precisión), Recall (sensibilidad), Accuracy (exactitud), F-measure (medida F1) y AUC(Área bajo la curva)
-- OE5: Comparar el desempeño de los clasificadores Random Forest, XGBoost, LogisticRegression, SVM, Naive Bayes, Decision Tree y KNN versus los métodos de remuestreo SMOTE, RUS, SMOTE+ENN y SMOTE+TOMEK  sobre 7 variantes de datasets a partir de los 3 escenarios: España, Alemania y Francia en términos de Precision (precisión), Recall (sensibilidad), Accuracy (exactitud), F-measure (medida F1) y AUC(Área bajo la curva)
+## Specific Project Objectives 🧐
+- SO1: Analyze the strengths and limitations of classification algorithms such as RandomForest, SVM, XGBoost, LogisticRegression, Naive Bayes, Decision Tree, and KNN, and imbalance handling methods such as SMOTE, RUS, SMOTE+ENN, and SMOTE+TOMEK used in previous studies.
+- SO2: Design a comparison method to identify the best models in terms of the Random Forest, XGBoost, LogisticRegression, SVM, Naive Bayes, Decision Tree, and KNN algorithms by exploring the parameters of the SMOTE, RUS, SMOTE+ENN, and SMOTE+TOMEK balancing methods and exploring the merging of the Spain, France, and Germany datasets in various combinations.
+- SO3: Evaluate the SMOTE, RUS, SMOTE+ENN, and SMOTE+TOMEK resampling methods to determine the most suitable technique based on the precision, recall, accuracy, F1-score, and AUC metrics.
+- SO4: Evaluate the different models obtained from the Random Forest, XGBoost, LogisticRegression, SVM, Naive Bayes, Decision Tree, and KNN classification algorithms to identify the best model based on the precision, recall, accuracy, F1-score, and AUC metrics.
+- SO5: Compare the performance of the Random Forest, XGBoost, LogisticRegression, SVM, Naive Bayes, Decision Tree, and KNN classifiers versus the SMOTE, RUS, SMOTE+ENN, and SMOTE+TOMEK resampling methods on 7 different dataset variants from the Spain, Germany, and France scenarios in terms of precision, recall, accuracy, F1-score, and AUC.
 
-## Método propuesto 💯
-Proponemos una comparativa, de los algoritmos con mejor desempeño presentado en la literatura, Extreme Gradient Boosting (XGBoost), Random Forest, SVM, Regresión Logística , Naive Bayes, Decision Tree y KNN Combinándolos con el método de submuestreo RUS, el método de sobremuestreo SMOTE, y los métodos de sobremuestreo seguidos de submmuestreo SMOTE-ENN y SMOTE-TOMEK para evaluar su comportamiento frente a 7 escenarios diferentes, con conjuntos de datos de Alemania, España, Francia y Alemania-España, España-Francia y Alemania-Francia. Ya que es probable que cada algoritmo presente un desempeño mejor en cada escenario, en base al método con el que se combine para lidiar con el problema de los datos desbalanceados en términos de precisión, sensibilidad, exactitud y valor-F1.
+## Proposed Method 💯
+We propose a comparative study of the best-performing algorithms presented in the literature, including Extreme Gradient Boosting (XGBoost), Random Forest, SVM, Logistic Regression, Naive Bayes, Decision Tree, and KNN, combined with the RUS undersampling method, SMOTE oversampling method, and the combination of oversampling and undersampling methods (SMOTE-ENN and SMOTE-TOMEK). We evaluate their performance on 7 different scenarios, using datasets from Germany, Spain, France, and combinations of Germany-Spain, Spain-France, and Germany-France. Since each algorithm is likely to perform better in different scenarios based on the resampling method used to deal with the imbalanced data problem, we evaluate their performance in terms of precision, recall, accuracy, and F1-score.
 
-## Lista de Actividades realizadas para el proyecto ⭐ 💻
-- Extracción del dataset de Kaggle
-- Entendimiento del dataset (componentes y registros)
-- Preparación de los datos (filtros, modificaciones y eliminaciones)
-- Escalamiento de los datos (Reemplazar por rangos entre 0 y 1)
-- Separación del dataset general en 7 dataset específicos (dataset de Francia, España, Alemania, Francia+Alemania, Francia+España, Alemania+España y Francia+Alemania+España)
-- Gráfico pie chart para visualizar el desbalanceo por cada dataset
-- Aplicación de los métodos RUS, SMOTE, SMOTE+ENN y SMOTE+TOMEK en cada uno de los datasets
-- Aplicación del algoritmo XGBoost
-- Aplicación de los algoritmos de predicción XGBoost, Random Forest, SVM, LogisticRegression, Naive Bayes, Decision Tree y KNN en cada uno de los escenarios resultado de las técnicas de muestreo en cada dataset.
-- Evaluar en base a las métricas cada resultado obtenido en cada conjunto de algoritmo+técnica de remuestreo+dataset
+## List of Activities carried out for the project ⭐ 💻
+- Dataset extraction from Kaggle.
+- Understanding the dataset (components and records).
+- Data preparation (filters, modifications, and deletions).
+- Data scaling (replace with ranges between 0 and 1).
+- Separation of the overall dataset into 7 specific datasets (datasets for France, Spain, Germany, France+Germany, France+Spain, Germany+Spain, and France+Germany+Spain).
+- Pie chart visualization to show the imbalance in each dataset.
+- Application of the RUS, SMOTE, SMOTE+ENN, and SMOTE+TOMEK methods to each dataset.
+- Application of the XGBoost algorithm.
+- Application of the XGBoost, Random Forest, SVM, LogisticRegression, Naive Bayes, Decision Tree, and KNN prediction algorithms to each dataset resulting from the resampling techniques.
+- Evaluation of the obtained results for each algorithm+resampling technique+dataset combination based on the metrics.
 
-## Lista de métricas ⚡
-- Precisión
-- Exhaustividad
-- Exactitud
-- Valor F1
-- Área bajo la curva ROC (AUC)
+## List of Metrics ⚡
+- Precision
+- Recall
+- Accuracy
+- F1-score
+- Area under the ROC curve (AUC)
 
----
-## Pasos para ejecutar el aplicativo 📈
-1. Clonar el proyecto 
-2. Instalar las librerias ubicadas en el archivo paquetes.sh
-3. Escoger python como lenguaje de interpretación
-4. Seleccionar un dataset (guiarse por el nombre del archivo .py) y ejecutarlo para obtener los resultados de las técnicas RUS, SMOTE, SMOTE+ENN y SMOTE+TOMEK de ese dataset
-5. Para ejecutar, en PyCharm en las opciones elegir Run > Run (Alt+Máyus+F10) y seleccionar el "Run Configuracion" por defecto  
-6. Los archivos que empiezan por Dataset son derivados del proyecto principal PrototipoGrupo2.
-7. En protipogrupo2 se encuentra la preparación de datos y la separación de datasets de acuerdo a los países y se grafica los piechart que muestran la data desbalanceada.
-8. En los archivos que empiezan con Dataset, en cada uno de estos se aplica los métodos de remuestreo, y en cada uno de los métodos aplicado en cada escenario se muestra un gráfico de barras de la versión antes de aplicar el método y luego de aplicado el método.
+## Steps to Execute the Application 📈
+1. Clone the project.
+2. Install the libraries located in the "paquetes.sh" file.
+3. Choose Python as the interpretation language.
+4. Select a dataset (refer to the .py file name) and execute it to obtain the results of the RUS, SMOTE, SMOTE+ENN, and SMOTE+TOMEK techniques for that dataset.
+5. To execute in PyCharm, go to Run > Run (Alt+Shift+F10) and select the default "Run Configuration".
+6. The files starting with "Dataset" are derived from the main project "PrototipoGrupo2".
+7. In "prototipogrupo2", data preparation and dataset separation are performed according to the countries, and pie charts showing the imbalanced data are generated.
+8. In the files starting with "Dataset", the resampling methods are applied, and for each method applied in each scenario, a bar chart is displayed showing the version before and after applying the method.
 
-## Contribuidores🤝
+## Contributors🤝
 - Kevin Chávez
 - Kevin Humareda
 - Pedro Shiguihara
