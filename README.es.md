@@ -40,7 +40,7 @@ Proponemos una comparativa, de los algoritmos con mejor desempeño presentado en
 4. Seleccionar un dataset (guiarse por el nombre del archivo .py) y ejecutarlo para obtener los resultados de las técnicas RUS, SMOTE, SMOTE+ENN y SMOTE+TOMEK de ese dataset
 5. Para ejecutar, en PyCharm en las opciones elegir Run > Run (Alt+Máyus+F10) y seleccionar el "Run Configuracion" por defecto  
 6. Los archivos que empiezan por Dataset son derivados del proyecto principal PrototipoGrupo2.
-7. En protipogrupo2 se encuentra la preparación de datos y la separación de datasets de acuerdo a los países y se grafica los piechart que muestran la data desbalanceada.
+7. En prototipogrupo2 se encuentra la preparación de datos y la separación de datasets de acuerdo a los países y se grafica los piechart que muestran la data desbalanceada.
 8. En los archivos que empiezan con Dataset, en cada uno de estos se aplica los métodos de remuestreo, y en cada uno de los métodos aplicado en cada escenario se muestra un gráfico de barras de la versión antes de aplicar el método y luego de aplicado el método.
 
 ## Contribuidores🤝
